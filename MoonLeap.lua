@@ -16,7 +16,7 @@ local Tab1Section = Instance.new("TextLabel")
 local UICorner_4 = Instance.new("UICorner")
 local Button = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
+local ScriptsTab = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local HomeTab = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
@@ -26,13 +26,10 @@ local Credit = Instance.new("TextLabel")
 local UICorner_9 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_10 = Instance.new("UICorner")
-local LocalPlayerTab = Instance.new("Frame")
+local ScriptsTab_2 = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local WalkSpeed = Instance.new("TextLabel")
+local Tiger = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local Slider1 = Instance.new("Frame")
-local ButtonSlider = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
 
 --Properties:
 
@@ -124,20 +121,21 @@ Button.TextWrapped = true
 
 UICorner_5.Parent = Button
 
-TextButton.Parent = SideFrame
-TextButton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.0879999995, 0, 0.329824567, 0)
-TextButton.Size = UDim2.new(0, 103, 0, 23)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "LocalPlayer"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
+ScriptsTab.Name = "ScriptsTab"
+ScriptsTab.Parent = SideFrame
+ScriptsTab.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+ScriptsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsTab.BorderSizePixel = 0
+ScriptsTab.Position = UDim2.new(0.0879999995, 0, 0.329824567, 0)
+ScriptsTab.Size = UDim2.new(0, 103, 0, 23)
+ScriptsTab.Font = Enum.Font.SourceSansBold
+ScriptsTab.Text = "Scripts"
+ScriptsTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsTab.TextScaled = true
+ScriptsTab.TextSize = 14.000
+ScriptsTab.TextWrapped = true
 
-UICorner_6.Parent = TextButton
+UICorner_6.Parent = ScriptsTab
 
 HomeTab.Name = "HomeTab"
 HomeTab.Parent = Frame
@@ -193,63 +191,40 @@ TextLabel.TextWrapped = true
 UICorner_10.CornerRadius = UDim.new(0, 5)
 UICorner_10.Parent = TextLabel
 
-LocalPlayerTab.Name = "LocalPlayerTab"
-LocalPlayerTab.Parent = Frame
-LocalPlayerTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LocalPlayerTab.BackgroundTransparency = 1.000
-LocalPlayerTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LocalPlayerTab.BorderSizePixel = 0
-LocalPlayerTab.Position = UDim2.new(0.277777791, 0, 0, 0)
-LocalPlayerTab.Size = UDim2.new(0, 325, 0, 285)
+ScriptsTab_2.Name = "ScriptsTab"
+ScriptsTab_2.Parent = Frame
+ScriptsTab_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsTab_2.BackgroundTransparency = 1.000
+ScriptsTab_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsTab_2.BorderSizePixel = 0
+ScriptsTab_2.Position = UDim2.new(0.277777791, 0, 0, 0)
+ScriptsTab_2.Size = UDim2.new(0, 325, 0, 285)
 
-UICorner_11.Parent = LocalPlayerTab
+UICorner_11.Parent = ScriptsTab_2
 
-WalkSpeed.Name = "WalkSpeed"
-WalkSpeed.Parent = LocalPlayerTab
-WalkSpeed.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
-WalkSpeed.BorderSizePixel = 0
-WalkSpeed.Position = UDim2.new(0.0430769213, 0, 0.0701754391, 0)
-WalkSpeed.Size = UDim2.new(0, 301, 0, 25)
-WalkSpeed.Font = Enum.Font.SourceSansBold
-WalkSpeed.Text = "WalkSpeed:16"
-WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
-WalkSpeed.TextScaled = true
-WalkSpeed.TextSize = 14.000
-WalkSpeed.TextWrapped = true
+Tiger.Name = "Tiger"
+Tiger.Parent = ScriptsTab_2
+Tiger.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Tiger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tiger.BorderSizePixel = 0
+Tiger.Position = UDim2.new(0.0399999991, 0, 0.0456140339, 0)
+Tiger.Size = UDim2.new(0, 296, 0, 32)
+Tiger.Font = Enum.Font.SourceSansBold
+Tiger.Text = "Tiger Admin(Prison life)"
+Tiger.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tiger.TextScaled = true
+Tiger.TextSize = 14.000
+Tiger.TextWrapped = true
 
-UICorner_12.Parent = WalkSpeed
-
-Slider1.Name = "Slider1"
-Slider1.Parent = LocalPlayerTab
-Slider1.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
-Slider1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Slider1.BorderSizePixel = 0
-Slider1.Position = UDim2.new(0.0430769213, 0, 0.19298245, 0)
-Slider1.Size = UDim2.new(0, 294, 0, 8)
-
-ButtonSlider.Name = "ButtonSlider"
-ButtonSlider.Parent = Slider1
-ButtonSlider.BackgroundColor3 = Color3.fromRGB(184, 185, 255)
-ButtonSlider.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ButtonSlider.BorderSizePixel = 0
-ButtonSlider.Position = UDim2.new(0.168503329, 0, -1.25, 0)
-ButtonSlider.Size = UDim2.new(0, 27, 0, 29)
-ButtonSlider.Font = Enum.Font.SourceSans
-ButtonSlider.Text = ""
-ButtonSlider.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonSlider.TextSize = 14.000
-
-UICorner_13.CornerRadius = UDim.new(1, 0)
-UICorner_13.Parent = ButtonSlider
+UICorner_12.Parent = Tiger
 
 -- Scripts:
 
-local function MLTF_fake_script() -- SideFrame.LocalScript 
+local function AOIE_fake_script() -- SideFrame.LocalScript 
 	local script = Instance.new('LocalScript', SideFrame)
 
-	script.Parent.TextButton.MouseButton1Click:Connect(function()
-		script.Parent.Parent.LocalPlayerTab.Visible = true
+	script.Parent.ScriptsTab.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ScriptsTab.Visible = true
 		script.Parent.Parent.HomeTab.Visible = false
 	end)
 	
@@ -258,68 +233,16 @@ local function MLTF_fake_script() -- SideFrame.LocalScript
 		script.Parent.Parent.HomeTab.Visible = true
 	end)
 end
-coroutine.wrap(MLTF_fake_script)()
-local function VHVU_fake_script() -- ButtonSlider.WalkSpeed 
-	local script = Instance.new('LocalScript', ButtonSlider)
+coroutine.wrap(AOIE_fake_script)()
+local function TXQUXJP_fake_script() -- ScriptsTab_2.Slider1script 
+	local script = Instance.new('LocalScript', ScriptsTab_2)
 
-	local plr = game.Players.LocalPlayer
-	script.Parent.Changed:Connect(function()
-		local scale = script.Parent.Position.X.Scale 
-		local num = math.floor(scale * 100)
-		local volume = num
-		local humanoid = plr.Character:FindFirstChild("Humanoid")
-		if humanoid then
-			humanoid.WalkSpeed = num + (1*volume)
-			script.Parent.Parent.Parent.WalkSpeed.Text = "WalkSpeed:"..volume
-		end
+	script.Parent.Tiger.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/TigerAdmin.lua"))()
 	end)
 end
-coroutine.wrap(VHVU_fake_script)()
-local function QEZOW_fake_script() -- LocalPlayerTab.Slider1script 
-	local script = Instance.new('LocalScript', LocalPlayerTab)
-
-	local Player = game:GetService("Players").LocalPlayer
-	local UIS = game:GetService("UserInputService")
-	local Runservice = game:GetService("RunService")
-	local Frame = script.Parent.Slider1
-	local Button = Frame.ButtonSlider
-	local db = false
-	local step = 0.01
-	local percentage = 0
-	
-	function snap(number,factor)
-		if factor == 0 then
-			return number
-		else
-			return math.floor(number/factor+0.5)*factor
-	
-		end
-	end
-	
-	UIS.InputEnded:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 then
-			db = false
-		end
-	end)
-	
-	Button.MouseButton1Down:Connect(function()
-		db = true
-	end)
-	
-	Runservice.RenderStepped:Connect(function()
-		if db then
-			local MousePos = UIS:GetMouseLocation().X
-			local BtnPos = Button.Position
-			local FrameSize = Frame.AbsoluteSize.X
-			local FramePos = Frame.AbsolutePosition.X
-			local pos = snap((MousePos-FramePos)/FrameSize,step)
-			percentage = math.clamp(pos,0,1)
-			Button.Position = UDim2.new(percentage,0,BtnPos.Y.Scale,BtnPos.Y.Offset)
-		end
-	end)
-end
-coroutine.wrap(QEZOW_fake_script)()
-local function VUBAQP_fake_script() -- Frame.SmoothDrag 
+coroutine.wrap(TXQUXJP_fake_script)()
+local function HBDLDZJ_fake_script() -- Frame.SmoothDrag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Drag = script.Parent
@@ -362,4 +285,4 @@ local function VUBAQP_fake_script() -- Frame.SmoothDrag
 		end)
 	
 end
-coroutine.wrap(VUBAQP_fake_script)()
+coroutine.wrap(HBDLDZJ_fake_script)()
