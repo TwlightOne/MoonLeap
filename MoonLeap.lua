@@ -238,7 +238,7 @@ local function TXQUXJP_fake_script() -- ScriptsTab_2.Slider1script
 	local script = Instance.new('LocalScript', ScriptsTab_2)
 
 	script.Parent.Tiger.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/dalloc2/Roblox/main/TigerAdmin.lua"))()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/buWDrqJT'),true)
 	end)
 end
 coroutine.wrap(TXQUXJP_fake_script)()
