@@ -9,16 +9,13 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Charaacter"
-})
-local Section2 = Tab:AddSection({
-	Name = "Time: "..os.time()
+	Name = "Executor Hub"
 })
 
 Tab:AddTextbox({
 	Name = "Script:",
 	Default = "",
-	TextDisappear = false,
+	TextDisappear = true,
 	Callback = function(Value)
 		loadstring(Value)
 	end	  
