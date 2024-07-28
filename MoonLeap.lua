@@ -1,49 +1,17 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Moon Leap ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
-	Name = "LocalPlayer",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-OrionLib:MakeNotification({
-	Name = "Welcome",
-	Content = "Hi, "..game.Players.LocalPlayer,
-	Image = "rbxassetid://4483345998",
-	Time = 2
-})
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Moon Leap", "BloodTheme")
+local Tab = Window:NewTab("LocalPlayer")
+local Section = Tab:NewSection("Character")
+local Plr = game:GetService("Players").LocalPlayer
+local Humanoid = Plr.Character:WaitForChild("Humanoid")
+Section:NewButton("Reset Fast", "Health 100 -> 0", function()
+	Humanoid.Health = 0
+end)
 
-local Section = Tab:AddSection({
-	Name = "Character"
-})
+Section:NewSlider("WalkSpeed", "WalkSpeed", 5000, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	Humanoid.WalkSpeed = s
+end)
 
-Tab:AddButton({
-	Name = "Reset Fast",
-	Callback = function()
-		game.Players.LocalPlayer.Character.Humanoid.Health = 0
-	end    
-})
-Tab:AddSlider({
-	Name = "Walkspeed",
-	Min = 16,
-	Max = 1000,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Walkspeed",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-	end    
-})
-
-Tab:AddSlider({
-	Name = "JumpPower",
-	Min = 16,
-	Max = 1000,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "JumpPower",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end    
-})
+Section:NewSlider("JumpPower", "JumpPower", 5500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	Humanoid.JumpPower = s
+end)
