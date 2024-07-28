@@ -1,15 +1,11 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Moon Leap", HidePremium = false, SaveConfig = true, ConfigFolder = ""})
-local Plr = game.Players.LocalPlayer
-local Humanoid = Plr.Character:WaitForChild("Humanoid")
-
+local Window = OrionLib:MakeWindow({Name = "Moon Leap", HidePremium = false, SaveConfig = true, ConfigFolder = "moonLeap"})
+local LocalPlayer = game.Players.LocalPlayer
+loads Humanoid = LocalPlayer.Character.Humanoid
 local Tab = Window:MakeTab({
 	Name = "Executor",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "Executor Hub"
 })
 
 Tab:AddTextbox({
@@ -17,7 +13,8 @@ Tab:AddTextbox({
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-		loadstring(Value)
-		print("Executed: "..Value)
+		loadstring(Value)()
 	end	  
 })
+
+OrionLib:Init()
