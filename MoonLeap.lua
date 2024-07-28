@@ -18,5 +18,6 @@ Tab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(Value)
 		loadstring(Value)
+		print("Executed: "..Value)
 	end	  
 })
